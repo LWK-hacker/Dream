@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Prosperity & Online Safety Hub | Verified Insights</title>
+    <meta name="description" content="Comprehensive guide on online earnings, scam prevention, verified digital opportunities, and financial literacy.">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brandViolet: '#7c3aed',
+                        brandPink: '#ec4899',
+                        brandCyan: '#06b6d4',
+                        brandAmber: '#f59e0b',
+                        darkBg: '#0b0f19',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .vibrant-glow {
+            box-shadow: 0 0 35px -5px rgba(236, 72, 153, 0.3);
+        }
+        .modal-active {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-200 font-sans min-h-screen relative modal-active selection:bg-pink-500 selection:text-white">
+
+    <!-- Mandatory Terms & Verification Modal (Shown First) -->
+    <div id="termsModal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md transition-opacity duration-300">
+        <div class="relative w-full max-w-lg bg-slate-900 border-2 border-amber-500/50 rounded-2xl p-6 sm:p-8 shadow-2xl vibrant-glow transform transition-all scale-100">
+            
+            <!-- Warning Badge -->
+            <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-4">
+                <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                <span>Security Notice &amp; Terms</span>
+            </div>
+
+            <h2 class="text-2xl font-extrabold text-white font-display mb-3">Important Safety Disclaimer</h2>
+            
+            <!-- Exact 2-line Disclaimer regarding Scammers & Fake Schemes -->
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6 font-medium bg-slate-950/60 p-4 rounded-xl border border-slate-800">
+                Please beware of online scammers and fake money-earning schemes that ask for advance payments or personal info. Always verify official channels before participating in any digital programs or investments.
+            </p>
+
+            <!-- Action / Approve Button -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <button id="approveBtn" onclick="handleRedirect()" class="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-cyan-500 hover:opacity-95 text-white font-bold text-sm tracking-wide shadow-lg transition-all duration-200 active:scale-95 flex items-center justify-center space-x-2">
+                    <span>Approve &amp; Continue</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+            </div>
+            
+            <p class="text-[11px] text-slate-500 text-center mt-3">
+                By clicking "Approve", you acknowledge this fraud awareness warning.
+            </p>
+        </div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-slate-900/80 backdrop-blur-md border-b border-slate-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold font-display shadow-md">
+                    H
+                </div>
+                <span class="font-display font-extrabold text-lg text-white tracking-tight">Hub<span class="text-pink-500">Pulse</span></span>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-6 text-sm font-semibold text-slate-300">
+                <a href="#overview" class="hover:text-pink-400 transition-colors">Overview</a>
+                <a href="#security" class="hover:text-pink-400 transition-colors">Anti-Scam Guide</a>
+                <a href="#features" class="hover:text-pink-400 transition-colors">Verified Methods</a>
+                <a href="#faq" class="hover:text-pink-400 transition-colors">FAQ</a>
+            </nav>
+
+            <button onclick="handleRedirect()" class="px-4 py-2 text-xs font-bold rounded-lg bg-slate-800 border border-slate-700 text-slate-200 hover:bg-slate-700 transition-all">
+                Direct Redirect
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN SEO CONTENT SECTION -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-24 space-y-16">
+
+        <!-- Hero Section -->
+        <section id="overview" class="text-center space-y-6 pt-4 max-w-4xl mx-auto">
+            <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs font-bold uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-purple-400 animate-ping"></span>
+                <span>SEO Content &amp; Digital Safety Resource</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-6xl font-extrabold font-display text-white tracking-tight leading-tight">
+                Authentic Digital Opportunities &amp; <span class="gradient-text">Scam Awareness Guide</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+                Welcome to the definitive information directory. Our mission is to educate internet users on recognizing online fraudulent schemes, identifying authentic remote opportunities, and navigating digital platforms securely.
+            </p>
+        </section>
+
+        <!-- SEO Article Grid -->
+        <section id="security" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Card 1 -->
+            <article class="glass-card p-6 rounded-2xl hover:border-purple-500/40 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-xl mb-4">
+                    🛡️
+                </div>
+                <h2 class="text-xl font-bold text-white mb-2 font-display">Spotting Fake Earning Apps</h2>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                    Fraudulent platforms often guarantee unrealistic daily returns with zero effort. Learn how to audit domain histories, read unedited reviews, and check for official corporate registrations.
+                </p>
+                <div class="text-xs font-semibold text-purple-400">Read Safety Checklist &rarr;</div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="glass-card p-6 rounded-2xl hover:border-pink-500/40 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xl mb-4">
+                    💡
+                </div>
+                <h2 class="text-xl font-bold text-white mb-2 font-display">Legitimate Digital Skills</h2>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                    Real online earnings come from actual skills such as content creation, software engineering, digital design, copy editing, and specialized virtual assistant services.
+                </p>
+                <div class="text-xs font-semibold text-pink-400">Explore Verified Paths &rarr;</div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="glass-card p-6 rounded-2xl hover:border-cyan-500/40 transition-all duration-300">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-xl mb-4">
+                    🔒
+                </div>
+                <h2 class="text-xl font-bold text-white mb-2 font-display">Protecting Financial Data</h2>
+                <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                    Never share your bank credentials, OTP codes, or personal identification details with unverified online representatives promising instant wallet deposits.
+                </p>
+                <div class="text-xs font-semibold text-cyan-400">Security Guidelines &rarr;</div>
+            </article>
+
+        </section>
+
+        <!-- Detailed SEO Content Block -->
+        <section id="features" class="glass-card rounded-3xl p-8 sm:p-12 space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white font-display">Understanding Online Fraud Patterns in 2026</h2>
+            <div class="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
+                <p>
+                    As digital ecosystems evolve, scam operators continuously adjust their methodologies. The most prevalent scams include fake survey websites, automated trading bots promising guaranteed profit margins, deposit-first task schemes, and impersonation of well-known global brands.
+                </p>
+                <p>
+                    To ensure safe browsing and financial security, always keep in mind: legitimate businesses will never require you to pay money in advance to receive payment for completed work or tasks.
+                </p>
+            </div>
+
+            <!-- Colorful Stats / Key Highlights -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t border-slate-800">
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-2xl font-extrabold text-purple-400 font-display">100%</div>
+                    <div class="text-xs text-slate-400 mt-1">Free Educational Guides</div>
+                </div>
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-2xl font-extrabold text-pink-400 font-display">24/7</div>
+                    <div class="text-xs text-slate-400 mt-1">Community Vigilance</div>
+                </div>
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-2xl font-extrabold text-cyan-400 font-display">Verified</div>
+                    <div class="text-xs text-slate-400 mt-1">Information Sources</div>
+                </div>
+                <div class="bg-slate-950/60 p-4 rounded-xl border border-slate-800 text-center">
+                    <div class="text-2xl font-extrabold text-amber-400 font-display">Safe</div>
+                    <div class="text-xs text-slate-400 mt-1">User Protocols</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Accordion Section -->
+        <section id="faq" class="space-y-6 max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white font-display text-center">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+                    <h3 class="text-base font-bold text-white">How can I know if an online earning site is genuine?</h3>
+                    <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                        Genuine sites do not demand upfront payments or registration fees. They have clear contact details, realistic pay rates, and verified payment gateways.
+                    </p>
+                </div>
+                <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
+                    <h3 class="text-base font-bold text-white">What should I do if I encountered a scam?</h3>
+                    <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                        Report the account immediately to the respective platform or local consumer protection cybercrime authority, and block any further communication.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Persistent Sticky Action Bar (Remains on Screen During Scroll) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-lg border-t border-slate-800 p-3 sm:p-4 shadow-2xl">
+        <div class="max-w-4xl mx-auto flex items-center justify-between gap-3">
+            <div class="hidden sm:flex items-center space-x-2 text-xs font-semibold text-slate-400">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>Verified Gateway Active</span>
+            </div>
+
+            <!-- 2 Persistent Sticky Buttons -->
+            <div class="flex items-center gap-3 w-full sm:w-auto justify-end">
+                <button onclick="handleRedirect()" class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-gradient-to-r from-pink-500 via-purple-600 to-cyan-500 hover:opacity-90 text-white font-extrabold text-xs sm:text-sm tracking-wide shadow-lg shadow-purple-500/20 active:scale-95 transition-all flex items-center justify-center space-x-1.5">
+                    <span>Proceed Now</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+                <button onclick="handleRedirect()" class="flex-1 sm:flex-none px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-slate-200 font-bold text-xs sm:text-sm active:scale-95 transition-all flex items-center justify-center space-x-1.5">
+                    <span>Visit Official Channel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // =========================================================
+        // REDIRECT URL CONFIGURATION
+        // Replace 'https://www.youtube.com' with your desired URL.
+        // =========================================================
+        const TARGET_REDIRECT_URL = "https://bet629.vip?code=11545133";
+
+        // Handle Terms Approval & Redirection
+        function handleRedirect() {
+            // Dismiss terms modal
+            const modal = document.getElementById('termsModal');
+            if (modal) {
+                modal.classList.add('opacity-0');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.classList.remove('modal-active');
+                }, 300);
+            }
+
+            // Perform redirection to target link
+            window.location.href = TARGET_REDIRECT_URL;
+        }
+
+        // Prevent background scrolling while Modal is active
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('modal-active');
+        });
+    </script>
+</body>
+</html>
